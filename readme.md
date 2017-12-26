@@ -1,7 +1,21 @@
 
 # CzProject\Arrays
 
+[![Build Status](https://travis-ci.org/czproject/arrays.svg?branch=master)](https://travis-ci.org/czproject/arrays)
+
 Array tools library.
+
+
+## Installation
+
+[Download a latest package](https://github.com/czproject/arrays/releases) or use [Composer](http://getcomposer.org/):
+
+```
+composer require czproject/arrays
+```
+
+`CzProject\Arrays` requires PHP 5.4.0 or later.
+
 
 ## Usage
 
@@ -128,19 +142,6 @@ $data = Arrays::merge($config, $defaultConfig);
 ]
 */
 ```
-
-
-Installation
-------------
-
-[Download a latest package](https://github.com/czproject/arrays/releases) or use [Composer](http://getcomposer.org/):
-
-```
-composer require [--dev] czproject/arrays
-```
-
-`CzProject\Arrays` requires PHP 5.4.0 or later.
-
 
 ------------------------------
 
