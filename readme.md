@@ -24,8 +24,6 @@ composer require czproject/arrays
 
 
 ``` php
-<?php
-
 use CzProject\Arrays;
 
 ```
@@ -33,8 +31,6 @@ use CzProject\Arrays;
 ### `flatten()`
 
 ``` php
-<?php
-
 $data = Arrays::flatten(array(
 	'value 1',
 	'values' => array(
@@ -60,8 +56,6 @@ $data = Arrays::flatten(array(
 ### `fetchPairs()`
 
 ``` php
-<?php
-
 $rows = array(
 	array(
 		'id' => 1,
@@ -94,8 +88,6 @@ $data = Arrays::fetchPairs($rows, 'id', 'name');
 ### `merge()`
 
 ``` php
-<?php
-
 $defaultConfig = array(
 	'parameters' => array(
 		'database' => array(
