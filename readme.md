@@ -17,7 +17,7 @@ Array tools library.
 composer require czproject/arrays
 ```
 
-`CzProject\Arrays` requires PHP 5.4.0 or later.
+`CzProject\Arrays` requires PHP 5.6.0 or later.
 
 
 ## Usage
