@@ -8,63 +8,63 @@ require __DIR__ . '/../bootstrap.php';
 
 test(function () {
 
-	$defaultConfig = array(
-		'parameters' => array(
-			'database' => array(
+	$defaultConfig = [
+		'parameters' => [
+			'database' => [
 				'host' => 'localhost',
 				'database' => 'lorem_ipsum',
 				'driver' => 'mysql',
-			),
-		),
+			],
+		],
 
-		'messages' => array(
+		'messages' => [
 			'success' => 'Success!',
 			'error' => 'Error!',
-		),
-	);
+		],
+	];
 
-	$config = array(
-		'parameters' => array(
-			'database' => array(
+	$config = [
+		'parameters' => [
+			'database' => [
 				'user' => 'user123',
 				'password' => 'password123',
-			),
-		),
+			],
+		],
 
-		'messages' => array(
+		'messages' => [
 			'error' => 'Fatal Error!',
-		),
-	);
+		],
+	];
 
 	$data = Arrays::merge($config, $defaultConfig);
 
-	Assert::same(array(
-		'parameters' => array(
-			'database' => array(
+	Assert::same([
+		'parameters' => [
+			'database' => [
 				'host' => 'localhost',
 				'database' => 'lorem_ipsum',
 				'driver' => 'mysql',
 				'user' => 'user123',
 				'password' => 'password123',
-			),
-		),
+			],
+		],
 
-		'messages' => array(
+		'messages' => [
 			'success' => 'Success!',
 			'error' => 'Fatal Error!',
-		)
-	), $data);
+		]
+	], $data);
 
 });
 
 
 test(function () {
 
-	$data = array(
-		'parameters' => array(
+	$data = [
+		'parameters' => [
 			'host' => 'localhost',
-		),
-	);
+		],
+	];
 
 	Assert::same($data, Arrays::merge(NULL, $data));
 
@@ -73,11 +73,11 @@ test(function () {
 
 test(function () {
 
-	$data = array(
-		'parameters' => array(
+	$data = [
+		'parameters' => [
 			'host' => 'localhost',
-		),
-	);
+		],
+	];
 
 	Assert::same($data, Arrays::merge($data, NULL));
 
@@ -86,31 +86,31 @@ test(function () {
 
 test(function () {
 
-	$default = array(
-		'parameters' => array(
+	$default = [
+		'parameters' => [
 			'host' => 'localhost',
-		),
-		'ignore' => array(
+		],
+		'ignore' => [
 			'.git*',
 			'/vendor/',
-		),
-	);
+		],
+	];
 
-	$config = array(
-		'ignore' => array(
+	$config = [
+		'ignore' => [
 			'*.txt',
-		),
-	);
+		],
+	];
 
-	Assert::same(array(
-		'parameters' => array(
+	Assert::same([
+		'parameters' => [
 			'host' => 'localhost',
-		),
-		'ignore' => array(
+		],
+		'ignore' => [
 			'.git*',
 			'/vendor/',
 			'*.txt',
-		),
-	), Arrays::merge($config, $default));
+		],
+	], Arrays::merge($config, $default));
 
 });

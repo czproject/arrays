@@ -11,7 +11,7 @@
 		 */
 		public static function flatten($arr)
 		{
-			$res = array();
+			$res = [];
 
 			static::recursiveWalk($arr, function ($val, $key) use (&$res) {
 				if (is_scalar($val)) {
@@ -34,7 +34,7 @@
 					static::recursiveWalk($value, $callback);
 
 				} else {
-					call_user_func_array($callback, array($value, $key));
+					call_user_func_array($callback, [$value, $key]);
 					// $callback($value, $key);
 				}
 			}
@@ -49,21 +49,21 @@
 		 */
 		public static function fetchPairs($data, $key, $value)
 		{
-			$list = array();
+			$list = [];
 
 			foreach ($data as $row) {
 				$itemKey = NULL;
 				$itemLabel = NULL;
 
 				if (is_callable($key)) {
-					$itemKey = call_user_func_array($key, array($row));
+					$itemKey = call_user_func_array($key, [$row]);
 
 				} else {
 					$itemKey = is_array($row) ? $row[$key] : $row->{$key};
 				}
 
 				if (is_callable($value)) {
-					$itemLabel = call_user_func_array($value, array($row));
+					$itemLabel = call_user_func_array($value, [$row]);
 
 				} else {
 					$itemLabel = is_array($row) ? $row[$value] : $row->{$value};
