@@ -138,6 +138,31 @@ $data = Arrays::merge($config, $defaultConfig);
 */
 ```
 
+
+### `pushFrom()`
+
+``` php
+$a = ['A1', 'A2', 'A3', 'A4'];
+$b = ['B1', 'B2'];
+$result = [];
+
+for ($i = 0; $i < 4; $i++) {
+	Arrays::pushFrom($result, $a);
+	Arrays::pushFrom($result, $b);
+}
+
+/* Returns:
+[
+	'A1',
+	'B1',
+	'A2',
+	'B2',
+	'A3',
+	'A4',
+]
+*/
+```
+
 ------------------------------
 
 License: [New BSD License](license.md)

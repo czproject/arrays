@@ -6,6 +6,21 @@
 	class Arrays
 	{
 		/**
+		 * @param  array
+		 * @param  array
+		 * @return void
+		 */
+		public static function pushFrom(array &$arr, array &$arrFrom)
+		{
+			if (empty($arrFrom)) {
+				return;
+			}
+
+			array_push($arr, array_shift($arrFrom));
+		}
+
+
+		/**
 		 * @param  array|\Traversable
 		 * @return array
 		 */
