@@ -1,7 +1,7 @@
 
 # CzProject\Arrays
 
-[![Build Status](https://travis-ci.org/czproject/arrays.svg?branch=master)](https://travis-ci.org/czproject/arrays)
+[![Build Status](https://github.com/czproject/arrays/workflows/Build/badge.svg)](https://github.com/czproject/arrays/actions)
 
 Array tools library.
 

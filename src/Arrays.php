@@ -6,8 +6,8 @@
 	class Arrays
 	{
 		/**
-		 * @param  array
-		 * @param  array
+		 * @param  array<string|int, mixed> $arr
+		 * @param  array<string|int, mixed> $arrFrom
 		 * @return void
 		 */
 		public static function pushFrom(array &$arr, array &$arrFrom)
@@ -21,8 +21,8 @@
 
 
 		/**
-		 * @param  array|\Traversable
-		 * @return array
+		 * @param  iterable<string|int, mixed> $arr
+		 * @return array<string|int, mixed>
 		 */
 		public static function flatten($arr)
 		{
@@ -39,10 +39,10 @@
 
 
 		/**
-		 * @param  array|\Traversable
+		 * @param  iterable<string|int, mixed> $arr
 		 * @return void
 		 */
-		public static function recursiveWalk($arr, $callback)
+		public static function recursiveWalk($arr, callable $callback)
 		{
 			foreach ($arr as $key => $value) {
 				if (is_array($value) || $value instanceof \Traversable) {
@@ -57,10 +57,10 @@
 
 
 		/**
-		 * @param  array|object[]
-		 * @param  string|callback
-		 * @param  string|callback
-		 * @return array
+		 * @param  array<array<string|int, mixed>|object> $data
+		 * @param  string|callable $key
+		 * @param  string|callable $value
+		 * @return mixed[]
 		 */
 		public static function fetchPairs($data, $key, $value)
 		{
@@ -93,9 +93,9 @@
 
 		/**
 		 * Merges arrays. Left has higher priority than right one.
-		 * @param  array|NULL
-		 * @param  array|NULL
-		 * @return array|string
+		 * @param  mixed|NULL $left
+		 * @param  mixed|NULL $right
+		 * @return mixed|NULL
 		 * @see    https://github.com/nette/di/blob/master/src/DI/Config/Helpers.php
 		 */
 		public static function merge($left, $right)
