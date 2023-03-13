@@ -1,11 +1,13 @@
-
 # CzProject\Arrays
 
 [![Build Status](https://github.com/czproject/arrays/workflows/Build/badge.svg)](https://github.com/czproject/arrays/actions)
+[![Downloads this Month](https://img.shields.io/packagist/dm/czproject/arrays.svg)](https://packagist.org/packages/czproject/arrays)
+[![Latest Stable Version](https://poser.pugx.org/czproject/arrays/v/stable)](https://github.com/czproject/arrays/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/czproject/arrays/blob/master/license.md)
 
 Array tools library.
 
-<a href="https://www.paypal.me/janpecha/5eur"><img src="https://buymecoffee.intm.org/img/button-paypal-white.png" alt="Buy me a coffee" height="35"></a>
+<a href="https://www.janpecha.cz/donate/"><img src="https://buymecoffee.intm.org/img/donate-banner.v1.svg" alt="Donate" height="100"></a>
 
 
 ## Installation
